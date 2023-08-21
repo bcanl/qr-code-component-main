@@ -1,28 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lightGray: '#d6e2f0',
+            grayishBlue: '#7b879d',
+            darkBlue: '#1f3251',
+          }
+        },
+        screens: {
+          'sm': '375px',
+          'md': '1440px'
+        },
+        fontFamily: {
+          'sans': ['ui-sans-serif', 'system-ui', 'Outfit'],
+        },
+        container: {
+          center: true,
+        },
+      }
+    }
+  </script>
+
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | QR code component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
 
-  Improve your front-end skills by building projects
+<body class="bg-lightGray">
 
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main class="flex justify-center items-center h-screen">
+
+    <section class="bg-white w-[375px] flex flex-col rounded-2xl">
+      <figure class="p-4">
+        <img src="./images/image-qr-code.png" alt="qr" class="rounded-lg">
+      </figure>
+      <div class="px-6">
+        <h1 class="text-darkBlue text-center font-bold text-2xl">Improve your front-end skills by building projects
+        </h1>
+        <p class="px-4 text-center text-grayishBlue pt-4 pb-9">Scan the QR code to visit Frontend Mentor and take your
+          coding
+          skills to
+          the next level
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+
 </body>
+
 </html>
